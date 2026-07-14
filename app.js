@@ -25,7 +25,8 @@ const digitalTitles = [
   'Шел 02',
   'Шел 04',
   'Персонаж №26',
-  'Шел 03'
+  'Шел 03',
+  ...Array.from({length: 33}, (_, i) => `Иллюстрация №${i + 28}`)
 ];
 
 const academicTitles = [
@@ -60,7 +61,7 @@ const animationTitles = [
 ];
 
 const works = {
-  digital: Array.from({length: 27}, (_, i) => ({
+  digital: Array.from({length: 60}, (_, i) => ({
     src: `assets/digital/digital-${String(i + 1).padStart(2, '0')}.jpg`,
     title: digitalTitles[i],
     meta: 'Цифровая иллюстрация · 2026'
