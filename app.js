@@ -56,7 +56,7 @@ const digitalTitles = [
   'Сол Гудман в виде крысы',
   'Автопортрет',
   'Алтея в стиле диско',
-  'Иллюстрация №58',
+  'Автопортрет',
   'Гид в костюме вампира',
   'Битлз'
 ];
@@ -93,9 +93,11 @@ const animationTitles = [
 ];
 
 const works = {
-  digital: Array.from({length: 60}, (_, i) => ({
-    src: `assets/digital/digital-${String(i + 1).padStart(2, '0')}.jpg`,
-    title: digitalTitles[i],
+  digital: Array.from({length: 60}, (_, i) => i + 1)
+  .filter(number => ![32, 39, 58].includes(number))
+  .map(number => ({
+    src: `assets/digital/digital-${String(number).padStart(2, '0')}.jpg`,
+    title: digitalTitles[number - 1],
     meta: 'Цифровая иллюстрация · 2026'
   })),
   academic: Array.from({length: 22}, (_, i) => ({
