@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8b5cf6">
+  <meta name="description" content="Портфолио Алисы Домрачевой — анимация, цифровая иллюстрация и академические работы.">
+  <title>Алиса Домрачева — Портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <button class="menu-button" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button>
+    <nav class="menu">
+      <a href="#digital">Иллюстрации</a><a href="#animation">Анимация</a><a href="#academic">Академические</a><a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="blob blob-one"></div><div class="blob blob-two"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Портфолио · 2026</p>
+        <h1>Алиса<br><span>Домрачева</span></h1>
+        <p class="lead">Придумываю персонажей,<br>истории и целые миры.</p>
+        <a class="pill" href="#digital">Смотреть работы <b>↓</b></a>
+      </div>
+      <div class="hero-character" aria-label="Авторский персонаж Алисы">
+        <div class="orbit"><span>иллюстрация · анимация · персонажи · </span></div>
+        <img src="assets/alice-person.png" alt="Персонаж Алисы Домрачевой">
+        <button class="tap-hint" type="button">нажми на меня!</button>
+      </div>
+      <svg class="squiggle" viewBox="0 0 500 160" aria-hidden="true"><path d="M-20 88C69 4 111 153 194 83S329 15 369 83s95 77 157-5"/></svg>
+    </section>
+
+    <section class="about reveal">
+      <p class="section-number">01 / обо мне</p>
+      <div>
+        <h2>Рисую с детства.<br><em>И не собираюсь останавливаться.</em></h2>
+        <p>С детства увлекаюсь анимацией и графикой. Создаю собственных персонажей для своей анимационной вселенной.</p>
+      </div>
+    </section>
+
+    <section class="works-section" id="digital">
+      <div class="section-heading reveal"><p class="section-number">02 / цифровая иллюстрация</p><h2>Персонажи<br><span>и их истории</span></h2><p class="count">27 работ</p></div>
+      <div class="gallery digital-gallery" id="digital-gallery"></div>
+    </section>
+
+    <section class="works-section video-section" id="animation">
+      <div class="section-heading reveal"><p class="section-number">03 / анимация</p><h2>Истории<br><span>в движении</span></h2><p class="count">3 работы</p></div>
+      <div class="video-grid" id="video-gallery"></div>
+    </section>
+
+    <section class="works-section academic-section" id="academic">
+      <div class="section-heading reveal"><p class="section-number">04 / академические работы</p><h2>Форма, свет<br><span>и наблюдение</span></h2><p class="count">22 работы</p></div>
+      <div class="gallery academic-gallery" id="academic-gallery"></div>
+    </section>
+
+    <section class="contact" id="contacts">
+      <div class="contact-character"><img src="assets/alice-person.png" alt="Персонаж Алисы"></div>
+      <p class="section-number">05 / контакты</p>
+      <h2>Спасибо<br>за просмотр!</h2>
+      <div class="contact-links">
+        <a href="tel:+79207429593"><small>телефон</small>+7 920 742-95-93 <b>↗</b></a>
+        <a href="tg://resolve?domain=addora48"><small>telegram</small>@addora48 <b>↗</b></a>
+        <a href="mailto:alicedomra@gmail.com"><small>почта</small>alicedomra@gmail.com <b>↗</b></a>
+      </div>
+      <a class="download" href="assets/about/portfolio.pdf" download hidden>Скачать портфолио PDF <b>↓</b></a>
+      <p class="copyright">© Алиса Домрачева, 2026</p>
+    </section>
+  </main>
+
+  <button class="alice-guide" type="button" aria-label="Перейти к следующему разделу">
+    <span>Листай дальше!</span>
+    <img src="assets/alice-person.png" alt="">
+  </button>
+
+  <dialog class="lightbox">
+    <button class="close" aria-label="Закрыть">×</button>
+    <button class="prev" aria-label="Предыдущая работа">←</button>
+    <figure><img alt=""><figcaption><span></span><small></small></figcaption></figure>
+    <button class="next" aria-label="Следующая работа">→</button>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
